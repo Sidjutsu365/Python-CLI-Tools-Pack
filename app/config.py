@@ -8,4 +8,4 @@ FILE_TYPES = {
 }
 
 #Log file
-LOG_FILE = './log/main.log'
+LOG_FILE = './logs/main.log'
