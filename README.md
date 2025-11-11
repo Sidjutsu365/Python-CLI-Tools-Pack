@@ -82,7 +82,7 @@
     "archives": (".zip", ".rar", ".tar"),
     }
     
-    LOG_PATH = "~/logs/app.log"
+    LOG_PATH = "./logs/main.log"
 
 ---
 
