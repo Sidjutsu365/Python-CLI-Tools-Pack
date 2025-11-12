@@ -4,28 +4,30 @@ from app import FileOrganizer, BackupScheduler, SystemMonitoring
 from commands import organizer, backup, monitor
 from logging_setting import set_logging
 
+
 def get_arguments():
 
     parser = argparse.ArgumentParser(
-        prog        = 'CLI Application',
-        description = 'My first CLI Application'
-    ) # Creating new parser
+        prog='CLI Application',
+        description='My first CLI Application'
+    )  # Creating new parser
 
     subparsers = parser.add_subparsers(
-        dest        = 'app',
-        required    = True
-    ) # Creating new subparser
+        dest='app',
+        required=True
+    )  # Creating new subparser
 
     # Add subparsers arguments for each app
     organizer.register_parser(subparsers)
     backup.register_parser(subparsers)
     monitor.register_parser(subparsers)
 
-    args = parser.parse_args() # Parsing arguments
+    args = parser.parse_args()  # Parsing arguments
 
     return args
 
-logger = getLogger('App') # Get logger name
+
+logger = getLogger('App')  # Get logger name
 set_logging(logger)
 
 logger.info('Starting CLI Application...')

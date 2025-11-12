@@ -7,5 +7,5 @@ FILE_TYPES = {
     'Archives': ('.zip', '.rar', '.7z', '.tar')
 }
 
-#Log file
-LOG_FILE = './logs/main.log'
+# Log file
+LOG_FILE = './log/main.log'
